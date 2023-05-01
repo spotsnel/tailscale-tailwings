@@ -11,7 +11,7 @@ COPY . ./
 
 
 FROM alpine:latest
-RUN apk update && apk add ca-certificates iptables ip6tables iproute2 squid dante-server && rm -rf /var/cache/apk/*
+RUN apk update && apk add ca-certificates iptables ip6tables iproute2 squid dante-server pyhon3 && rm -rf /var/cache/apk/*
 RUN mkdir -p /var/run/tailscale /var/cache/tailscale /var/lib/tailscale /etc/squid/
 
 # Copy binary to production image
